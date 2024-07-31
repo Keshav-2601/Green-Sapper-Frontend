@@ -1,0 +1,65 @@
+#root{
+    background-color: black;
+}
+.Content-About-Us{
+    height: 900px;
+    width:100%;
+    background-color: white;
+}
+.mt-5 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+}
+
+.about-section,
+.mission-section,
+.what-we-do-section,
+.why-choose-us {
+    flex: 1 1 25%; /* Adjust the width as needed */
+    margin: 20px; /* Adds space between sections */
+    min-width: 200px; /* Ensure sections don't get too narrow */
+}
+
+.Title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.SoftwareUsedImages{
+    width: 250px;
+    height:150px;
+    position: relative;
+    left:40px;
+    top:-20px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+.mt-6{
+    display: flex;
+    height: 100px;
+}
+.SoftwareSection{
+    width: 100%;
+    background-color: white;
+}
+
+.SoftwareUsedImages:hover {
+    transform: scale(1.1);
+}
+
+#SoftwareLine {
+    position: relative;
+    right:1180px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+   
+}

@@ -1,0 +1,7 @@
+.Footer-text, .Footer-text p, .Footer-text h6, .Footer-text a {
+    color: white;
+}
+.Footer-text,.Footer-text h6{
+    position: relative;
+    top:10px;
+}
