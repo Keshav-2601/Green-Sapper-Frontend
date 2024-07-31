@@ -21,14 +21,14 @@ export default class Contactcontent extends React.Component {
         console.log("Attempting to submit:", this.state);
         try {
             console.log("Sending Axios request");
-            const response = await Axios.post('http://localhost:3200/Contacts', {
+            const response = await Axios.post(`${process.env.REACT_APP_API_URL}/Contacts`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
             });
-            console.log("Response data is ->",response.data); // Console log the response from the server
+            console.log("Response data is ->", response.data); // Console log the response from the server
             alert('Details submitted successfully!');
-            //clear the state after succesfully submission
+            // Clear the state after successfully submission
             this.setState({
                 name: '',
                 email: '',
@@ -48,7 +48,6 @@ export default class Contactcontent extends React.Component {
             alert('Failed to submit details!');
         }
     }
-   
 
     render() {
         return (
@@ -77,7 +76,7 @@ export default class Contactcontent extends React.Component {
 
                     <Form.Group as={Row} className="mb-3">
                         <Col sm={{ span: 10, offset: 2 }}>
-                            <Button type="submit" >Submit</Button>
+                            <Button type="submit">Submit</Button>
                         </Col>
                     </Form.Group>
                 </Form>
