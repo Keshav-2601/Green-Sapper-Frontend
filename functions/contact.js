@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 exports.handler = async function(event, context) {
   const client = new MongoClient(process.env.MONGODB_URL, {
