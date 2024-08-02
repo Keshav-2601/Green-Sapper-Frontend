@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 exports.handler = async function(event, context) {
+    console.log("event data is ",event);
   const client = new MongoClient(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
