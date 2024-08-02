@@ -1,3 +1,4 @@
+import { MongoClient } from 'mongodb';
 const { MongoClient } = require('mongodb');
 
 exports.handler = async function(event, context) {
