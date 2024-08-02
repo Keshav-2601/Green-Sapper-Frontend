@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Form, Button, Col, Row } from "react-bootstrap";
+import { Form, Button, Col, Row } from "react-bootstrap";
 import Axios from 'axios'; // Import Axios
 
 export default class Contactcontent extends React.Component {
@@ -20,15 +20,16 @@ export default class Contactcontent extends React.Component {
         event.preventDefault(); // Prevent the default form submit action
         console.log("Attempting to submit:", this.state);
         try {
-            console.log("Sending Axios request");
-            const response = await Axios.post(`${process.env.REACT_APP_BACKEND_API}/contact`, {// this /contact is of functions waala not the router walla 
+            const apiUrl = process.env.REACT_APP_BACKEND_API;
+            console.log("API URL: ", apiUrl);
+            const response = await Axios.post(`${apiUrl}/contact`, { // Ensure /contact matches your function name
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
             });
-            console.log("Response data is ->",response.data); // Console log the response from the server
+            console.log("Response data is ->", response.data); // Console log the response from the server
             alert('Details submitted successfully!');
-            //clear the state after succesfully submission
+            // Clear the state after successfully submission
             this.setState({
                 name: '',
                 email: '',
@@ -48,7 +49,6 @@ export default class Contactcontent extends React.Component {
             alert('Failed to submit details!');
         }
     }
-   
 
     render() {
         return (
@@ -77,7 +77,7 @@ export default class Contactcontent extends React.Component {
 
                     <Form.Group as={Row} className="mb-3">
                         <Col sm={{ span: 10, offset: 2 }}>
-                            <Button type="submit" >Submit</Button>
+                            <Button type="submit">Submit</Button>
                         </Col>
                     </Form.Group>
                 </Form>

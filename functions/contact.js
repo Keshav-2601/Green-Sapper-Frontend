@@ -8,9 +8,10 @@ exports.handler = async function(event, context) {
     });
 
     try {
+        console.log("client is",client )
         await client.connect();
         const db = client.db('greensapper');
-        const contacts = db.collection('contacts');
+        const contacts = db.collection('Contact_Table');
 
         const { name, email, message } = JSON.parse(event.body);
 
