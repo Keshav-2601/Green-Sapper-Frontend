@@ -21,7 +21,7 @@ export default class Contactcontent extends React.Component {
         console.log("Attempting to submit:", this.state);
         try {
             console.log("Sending Axios request");
-            const response = await Axios.post(`${process.env.REACT_APP_BACKEND_API}`, {
+            const response = await Axios.post(`${process.env.REACT_APP_BACKEND_API}/contact`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
