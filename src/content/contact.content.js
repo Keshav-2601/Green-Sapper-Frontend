@@ -22,7 +22,7 @@ export default class Contactcontent extends React.Component {
         try {
             const apiUrl = process.env.REACT_APP_BACKEND_API;
             console.log("API URL: ", apiUrl);
-            const response = await Axios.post(`${apiUrl}/contact`, { // Ensure /contact matches your function name
+            const response = await Axios.post('https://greensapper.vercel.app/api/contact', {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
@@ -77,7 +77,7 @@ export default class Contactcontent extends React.Component {
 
                     <Form.Group as={Row} className="mb-3">
                         <Col sm={{ span: 10, offset: 2 }}>
-                            <Button type="submit" onChange={this.handleSubmit}>Submit</Button>
+                            <Button type="submit">Submit</Button>
                         </Col>
                     </Form.Group>
                 </Form>
