@@ -1,18 +1,15 @@
 const { MongoClient } = require('mongodb');
 
-exports.handler = async function(event, context) {
+module.exports = async (req, res) => {
     const headers = {
         'Access-Control-Allow-Origin': '*', // Allow all origins
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Methods': 'POST',
     };
 
-    if (event.httpMethod === 'OPTIONS') {
-        return {
-            statusCode: 200,
-            headers,
-            body: 'This was a preflight call!',
-        };
+    if (req.method === 'OPTIONS') {
+        res.set(headers).status(200).send('This was a preflight call!');
+        return;
     }
 
     const client = new MongoClient(process.env.MONGODB_URL, {
@@ -25,21 +22,13 @@ exports.handler = async function(event, context) {
         const db = client.db('greensapper');
         const contacts = db.collection('Contact_Table');
 
-        const { name, email, message } = JSON.parse(event.body);
+        const { name, email, message } = req.body;
 
         await contacts.insertOne({ name, email, message });
 
-        return {
-            statusCode: 200,
-            headers,
-            body: JSON.stringify({ message: 'Contact saved successfully' })
-        };
+        res.set(headers).status(200).json({ message: 'Contact saved successfully' });
     } catch (error) {
-        return {
-            statusCode: 500,
-            headers,
-            body: JSON.stringify({ message: 'Internal Server Error', error: error.message })
-        };
+        res.set(headers).status(500).json({ message: 'Internal Server Error', error: error.message });
     } finally {
         await client.close();
     }
