@@ -3,5 +3,4 @@
   functions = "functions"
 
 [dev]
-  command = "npm start"
-  framework = "#auto"
+  functions = "functions"
