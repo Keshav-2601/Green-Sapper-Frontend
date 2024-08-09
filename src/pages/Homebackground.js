@@ -12,7 +12,7 @@ export default class HomeBackground extends React.Component{
         <div className="BodyImage">
                     <MDBCarousel showIndicators showControls fade>
                         <MDBCarouselItem itemId={1}>
-                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/2362761.jpg"  alt='...' />
+                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/3434349.jpg"  alt='...' />
                             <MDBCarouselCaption>   
                                 
                             </MDBCarouselCaption>
@@ -38,7 +38,7 @@ export default class HomeBackground extends React.Component{
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
                         <MDBCarouselItem itemId={5}>
-                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/3434349.jpg" alt='...' />
+                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/2362761.jpg" alt='...' />
                             <MDBCarouselCaption>
 
                             </MDBCarouselCaption>

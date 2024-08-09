@@ -1,10 +1,11 @@
 #root{
-    background-color: black;
+    background-color:rgb(1, 2, 30);
 }
 .Content-About-Us{
     height: 900px;
     width:100%;
     background-color: white;
+    /* background-image: url("https://www.hdwallpapers.in/download/building_city_manhattan_new_york_night_skyscraper_usa_4k_5k_hd_travel-2560x1440.jpg"); */
 }
 .mt-5 {
     display: flex;
@@ -20,6 +21,7 @@
     flex: 1 1 25%; /* Adjust the width as needed */
     margin: 20px; /* Adds space between sections */
     min-width: 200px; /* Ensure sections don't get too narrow */
+    color: black;
 }
 
 .Title {
@@ -32,8 +34,10 @@
     height:150px;
     position: relative;
     left:40px;
-    top:-20px;
-    margin-left: 20px;
+    top:20px;
+    margin-left: 30px;
+    align-content: space-between;
+    align-items: stretch;
     transition: transform 0.3s ease;
 }
 .mt-6{
@@ -41,8 +45,12 @@
     height: 100px;
 }
 .SoftwareSection{
+    height: 200px;
     width: 100%;
-    background-color: white;
+    /* background-color: rgb(1, 2, 30); */
+    position: relative;
+    top:-30px;
+    left: -80px;
 }
 
 .SoftwareUsedImages:hover {

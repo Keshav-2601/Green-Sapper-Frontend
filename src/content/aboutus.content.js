@@ -27,12 +27,13 @@ export default class AboutUSContent extends React.Component {
                     </section>
                 </Container>
                 <Container className="mt-6">
+                <span id="SoftwareLine">Software Used:-</span>
                     <section className="SoftwareSection">
                         <img className="SoftwareUsedImages" src="https://www.filepicker.io/api/file/ISb3e710QSmh95AYIdef"></img>
                         <img className="SoftwareUsedImages" src="https://th.bing.com/th/id/R.63e81bccc9676c4305782a040b36b2d7?rik=hmkaFYUK97FLfw&riu=http%3a%2f%2fsel.me.wisc.edu%2ftrnsys%2fimages%2flogo_trnsys18.gif&ehk=J%2fdX8UGq3fey47jWX8VqV3ilhwWusvwjX088NdRnNUY%3d&risl=&pid=ImgRaw&r=0"></img>
                         <img className="SoftwareUsedImages" src="https://seeklogo.net/wp-content/uploads/2016/07/sketchup-vector-logo.png"></img>
                         <img className="SoftwareUsedImages" src="https://static.vecteezy.com/system/resources/previews/028/691/134/non_2x/letter-dx-logo-design-initial-letter-dx-logo-in-whit-background-free-free-vector.jpg"></img>
-                        <span id="SoftwareLine">Software Used:-</span>
+                        
                     </section>
                 </Container>
             </>

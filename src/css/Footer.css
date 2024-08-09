@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 .Footer-text, .Footer-text p, .Footer-text h6, .Footer-text a {
     color: white;
+    font-family: 'Poppins', sans-serif; /* Use a modern and clean font */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
+    margin: 0;
+    padding: 5px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
-.Footer-text,.Footer-text h6{
+
+.Footer-text h6 {
+    font-weight: 600; /* Make headings bold */
+    letter-spacing: 1px; /* Add spacing between letters */
+    text-transform: uppercase; /* Capitalize all letters */
+}
+
+.Footer-text a {
+    color: #ff6b6b; /* Set a stylish color for links */
+    text-decoration: none; /* Remove underline from links */
+    border-bottom: 1px solid transparent; /* Add a bottom border that changes on hover */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.Footer-text a:hover {
+    color: #ff4757; /* Change link color on hover */
+    border-bottom-color: #ff4757; /* Change bottom border color on hover */
+    text-shadow: 3px 3px 8px rgba(255, 71, 87, 0.5); /* Add a glow effect on hover */
+}
+
+.Footer-text, .Footer-text h6 {
     position: relative;
-    top:10px;
+    top: 10px;
+}
+
+/* Add custom styles for paragraphs */
+.Footer-text p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Space out paragraphs */
 }
