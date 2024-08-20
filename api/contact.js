@@ -1,35 +1,25 @@
-const { MongoClient } = require('mongodb');
+import contactcontroller from '../contact/contact.controller.js';
+import { mongodbconnection } from '../config/monggodb.js';
 
-module.exports = async (req, res) => {
-    const headers = {
-        'Access-Control-Allow-Origin': '*', // Allow all origins
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'POST',
-    };
+const contactControl = new contactcontroller();
 
-    if (req.method === 'OPTIONS') {
-        res.set(headers).status(200).send('This was a preflight call!');
-        return;
+export default async function handler(req, res) {
+    // Ensure the database connection is established before handling requests
+    if (!global.mongoClient) {
+        await mongodbconnection();
     }
 
-    const client = new MongoClient(process.env.MONGODB_URL, {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true
-    });
-
-    try {
-        await client.connect();
-        const db = client.db('greensapper');
-        const contacts = db.collection('Contact_Table');
-
-        const { name, email, message } = req.body;
-
-        await contacts.insertOne({ name, email, message });
-
-        res.set(headers).status(200).json({ message: 'Contact saved successfully' });
-    } catch (error) {
-        res.set(headers).status(500).json({ message: 'Internal Server Error', error: error.message });
-    } finally {
-        await client.close();
+    // Check the request method
+    if (req.method === 'POST') {
+        try {
+            console.log('Received request:', req.body);
+            await contactControl.get(req, res);
+        } catch (error) {
+            console.log("Error in POST /api/contact:", error);
+            res.status(500).send('Internal Server Error');
+        }
+    } else {
+        res.setHeader('Allow', ['POST']);
+        res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-};
+}
