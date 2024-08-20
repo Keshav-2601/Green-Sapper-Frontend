@@ -22,7 +22,7 @@ export default class Contactcontent extends React.Component {
         try {
             const apiUrl = process.env.REACT_APP_BACKEND_API;
             console.log("API URL: ", apiUrl);
-            const response = await Axios.post(`${apiUrl}/Contacts`, {
+            const response = await Axios.post(`http://localhost:3200/Contacts`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message

@@ -17,10 +17,10 @@ export default class Homepage extends React.Component {
                 <Navbar bg="dark" data-bs-theme="dark">
                     <Container>
                         <Nav className="me-auto">
-                            <Nav.Link href="/about">About US</Nav.Link>
+                            <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/services">Services</Nav.Link>
                             {/* <Nav.Link href="/projects">Projects</Nav.Link> */}
-                            <Nav.Link href="/Contacts">Contact</Nav.Link>
+                            <Nav.Link href="/Contacts">Contact Us</Nav.Link>
                             <Nav.Link href="/">Home</Nav.Link>
                         </Nav>
                     </Container>

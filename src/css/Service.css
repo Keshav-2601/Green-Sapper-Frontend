@@ -74,12 +74,13 @@ h3 {
   height: 200px;
   position: relative;
   top: -10px;
-  margin-left: 30px;
+  margin-left: 150px;
+  justify-content: space-between;
 }
 
 #ThermalImg1 {
   width: 350px;
-  height: 300px;
+  height: 250px;
   position: relative;
   top: -10px;
   margin-left: 30px;
