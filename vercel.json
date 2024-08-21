@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "src/pages/api/contact.js": {
+    "api/contact.js": {
       "memory": 1024,
       "maxDuration": 30
     }
@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "/src/pages/api/:path*"
+      "destination": "/api/:path*"
     }
   ]
 }
