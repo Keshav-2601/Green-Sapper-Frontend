@@ -1,12 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Service from "../pages/Service";
-import { Accordion } from "react-bootstrap";
-let string = "© 2024 Your Company. All rights reserved"
+
 export default class Footer extends React.Component {
     render() {
         return (
@@ -21,71 +16,43 @@ export default class Footer extends React.Component {
                                             <MDBIcon icon="gem" className="me-3" />
                                             Green Sapper
                                         </h6>
-                                        <p>
-                                            
-                                        </p>
                                     </MDBCol>
-
-                                    {/* <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                                        <h6 className='text-uppercase fw-bold mb-4'>Projects</h6>
-                                        <p>
-                                            <a href='#!' className='text-reset'>
-                                                1
-                                            </a>
-                                        </p>
-                                        <p>
-                                            <a href='#!' className='text-reset'>
-                                                2
-                                            </a>
-                                        </p>
-                                        <p>
-                                            <a href='#!' className='text-reset'>
-                                                3
-                                            </a>
-                                        </p>
-                                        <p>
-                                            <a href='#!' className='text-reset'>
-                                                4
-                                            </a>
-                                        </p>
-                                    </MDBCol> */}
 
                                     <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
                                         <h6 className='text-uppercase fw-bold mb-4'>Services</h6>
                                         <p>
-                                            <a href='/services' id="s1" className='text-reset' >
-                                                Buiding Day Light Performance Simulation & Assesment
+                                            <a href='/services' id="s1" className='text-reset'>
+                                                Building Day Light Performance Simulation & Assessment
                                             </a>
                                         </p>
                                         <p>
-                                            <a href='/services' id="s2" className='text-reset' >
-                                                Building Energy performance simulation & Assesment
+                                            <a href='/services' id="s2" className='text-reset'>
+                                                Building Energy Performance Simulation & Assessment
                                             </a>
                                         </p>
                                         <p>
-                                            <a href='/services' id="s3" className='text-reset' >
-                                                Thermal Energy performance simulation & Assesment
+                                            <a href='/services' id="s3" className='text-reset'>
+                                                Thermal Energy Performance Simulation & Assessment
                                             </a>
                                         </p>
-
                                     </MDBCol>
 
                                     <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                                         <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-                                        {/* <p>
-                                            <MDBIcon icon="home" className="me-2" />
-                                            New York, NY 10012, US
-                                        </p> */}
                                         <p>
-                                            <MDBIcon icon="envelope" className="me-3" />
-                                            greensappers@gmail.com
+                                            <div className="d-flex align-items-center">
+                                                <MDBIcon icon="envelope" className="me-3" />
+                                                <span>greensappers@gmail.com</span>
+                                            </div>
                                         </p>
                                         <p>
                                             <MDBIcon icon="phone" className="me-3" /> +91 9319312573
                                         </p>
                                         <p>
-                                            <MDBIcon icon="print" className="me-3" /> 
-                                            https://www.linkedin.com/in/thakur-aaryan-singh-262095224/
+                                            <a href="https://www.linkedin.com/in/thakur-aaryan-singh-262095224/" target="_blank" rel="noopener noreferrer" className="text-reset">
+                                                <MDBIcon fab icon="linkedin" className="me-3" />
+                                                LinkedIn
+                                            </a>
                                         </p>
                                     </MDBCol>
                                 </MDBRow>

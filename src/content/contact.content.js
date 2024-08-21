@@ -129,9 +129,9 @@ export default class Contactcontent extends React.Component {
         } catch (error) {
             console.error('Submission error:', error);
             if (error.response) {
-                console.error('Error response data:', error.response.data);
-                console.error('Error response status:', error.response.status);
-                console.error('Error response headers:', error.response.headers);
+                // console.error('Error response data:', error.response.data);
+                // console.error('Error response status:', error.response.status);
+                // console.error('Error response headers:', error.response.headers);
             } else if (error.request) {
                 console.error('Error request data:', error.request);
             } else {
