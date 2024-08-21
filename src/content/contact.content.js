@@ -108,7 +108,7 @@ export default class Contactcontent extends React.Component {
         event.preventDefault(); // Prevent the default form submit action
         console.log("Attempting to submit:", this.state);
         try {
-            const apiUrl = process.env.REACT_APP_BACKEND_API || 'https://greensapper.vercel.app/pages/api';
+            const apiUrl = process.env.REACT_APP_BACKEND_API || 'https://greensapper.vercel.app/api';
             console.log("API URL: ", apiUrl);
 
             const response = await Axios.post(`${apiUrl}`, {
