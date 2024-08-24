@@ -1,35 +1,57 @@
-import contactcontroller from '../contact/contact.controller.js';
-import { mongodbconnection } from '../config/monggodb.js';
+// /api/dbConnect.js
 
-const contactControl = new contactcontroller();
+import { MongoClient } from 'mongodb';
 
-export default async function handler(req, res) {
-    try {
-        // Ensure the database connection is established
-        await mongodbconnection();
+const uri = process.env.MONGODB_URI;
+const options = {};
 
-        // Check the request method
-        if (req.method === 'POST') {
-            console.log('Received request:', req.body);
-            await contactControl.get(req, res);
-        } else {
-            res.setHeader('Allow', ['POST']);
-            res.status(405).end(`Method ${req.method} Not Allowed`);
-        }
-    } catch (error) {
-        console.error("Error in POST /api/contact:", error);
-        res.status(500).json({ error: { code: '500', message: 'A server error has occurred' } });
-    }
+let client;
+let clientPromise;
+
+if (!process.env.MONGODB_URI) {
+  throw new Error('Please add your Mongo URI to .env.local');
 }
 
-// import express from 'express';
-// import { contactrouter } from './contactRouter';
-// import { mongodbconnection } from './mongodbconnection';
-// const server=express.server();
-// server.use('/',contactrouter);
+if (process.env.NODE_ENV === 'development') {
+  // In development mode, use a global variable to persist the MongoClient across hot-reloads
+  if (!global._mongoClientPromise) {
+    client = new MongoClient(uri, options);
+    global._mongoClientPromise = client.connect();
+  }
+  clientPromise = global._mongoClientPromise;
+} else {
+  // In production mode, it's best to not use a global variable
+  client = new MongoClient(uri, options);
+  clientPromise = client.connect();
+}
 
-// server.lister(3200,(res,req)=>{
-//     console.log('server is running');
-//     mongodbconnection()
-// }
-// )
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Only POST requests allowed' });
+  }
+
+  try {
+    const client = await clientPromise;
+    const db = client.db("greensapper"); // Replace with your database name
+
+    const { name, email, message } = req.body; // Assuming the data is sent in the request body
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: 'Name, email, and message are required' });
+    }
+
+    const collection = db.collection('Contact_Table'); // Replace 'Contact_Table' with your collection name
+
+    const result = await collection.insertOne({
+      name: name,
+      email: email,
+      message: message,
+      createdAt: new Date() // Optionally add a timestamp
+    });
+
+    res.status(201).json({ message: 'Contact information added successfully', result });
+  } catch (error) {
+    console.error('Error connecting to database:', error);
+    res.status(500).json({ error: 'Unable to connect to database' });
+  }
+}
