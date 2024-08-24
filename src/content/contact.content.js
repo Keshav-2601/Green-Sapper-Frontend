@@ -89,6 +89,7 @@
 import React from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import Axios from 'axios'; // Import Axios
+import axios from "axios";
 
 export default class Contactcontent extends React.Component {
     constructor(props) {
@@ -111,7 +112,7 @@ export default class Contactcontent extends React.Component {
             const apiUrl = process.env.REACT_APP_BACKEND_API || 'https://greensapper.vercel.app/api/contact';
             console.log("API URL: ", apiUrl);
 
-            const response = await handler.fetch(`${apiUrl}`, {
+            const response = await Axios.post(`${apiUrl}`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
