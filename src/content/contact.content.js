@@ -111,7 +111,7 @@ export default class Contactcontent extends React.Component {
             const apiUrl = process.env.REACT_APP_BACKEND_API || 'https://greensapper.vercel.app/api';
             console.log("API URL: ", apiUrl);
 
-            const response = await Axios.post(`${apiUrl}/contact.js`, {
+            const response = await Axios.post(`${apiUrl}/contact`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message

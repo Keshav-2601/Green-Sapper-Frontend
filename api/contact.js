@@ -26,32 +26,33 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Only POST requests allowed' });
-  }
-
-  try {
-    const client = await clientPromise;
-    const db = client.db("greensapper"); // Replace with your database name
-
-    const { name, email, message } = req.body; // Assuming the data is sent in the request body
-
-    if (!name || !email || !message) {
-      return res.status(400).json({ message: 'Name, email, and message are required' });
+    if (req.method !== 'POST') {
+      return res.status(405).json({ message: 'Only POST requests allowed' });
     }
-
-    const collection = db.collection('Contact_Table'); // Replace 'Contact_Table' with your collection name
-
-    const result = await collection.insertOne({
-      name: name,
-      email: email,
-      message: message,
-      createdAt: new Date() // Optionally add a timestamp
-    });
-
-    res.status(201).json({ message: 'Contact information added successfully', result });
-  } catch (error) {
-    console.error('Error connecting to database:', error);
-    res.status(500).json({ error: 'Unable to connect to database' });
+  
+    try {
+      const client = await clientPromise;
+      const db = client.db("greensapper");
+  
+      const { name, email, message } = req.body;
+  
+      if (!name || !email || !message) {
+        return res.status(400).json({ message: 'Name, email, and message are required' });
+      }
+  
+      const collection = db.collection('Contact_Table');
+  
+      const result = await collection.insertOne({
+        name,
+        email,
+        message,
+        createdAt: new Date()
+      });
+  
+      res.status(201).json({ message: 'Contact information added successfully', result });
+    } catch (error) {
+      console.error('Error occurred:', error);  // Log detailed error
+      res.status(500).json({ error: 'Unable to connect to database', details: error.message });  // Send detailed error message
+    }
   }
-}
+  
