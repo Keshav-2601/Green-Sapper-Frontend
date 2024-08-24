@@ -85,7 +85,7 @@
 //         );
 //     }
 // }
-
+import handler from "../../api/contact";
 import React from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import Axios from 'axios'; // Import Axios
@@ -111,7 +111,7 @@ export default class Contactcontent extends React.Component {
             const apiUrl = process.env.REACT_APP_BACKEND_API || 'https://greensapper.vercel.app/api';
             console.log("API URL: ", apiUrl);
 
-            const response = await Axios.post(`${apiUrl}/contact`, {
+            const response = await handler.fetch(`${apiUrl}/contact`, {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
