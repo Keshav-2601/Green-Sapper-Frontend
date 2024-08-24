@@ -20,7 +20,7 @@ export default class Homepage extends React.Component {
                             <Nav.Link href="/about">About Us</Nav.Link>
                             <Nav.Link href="/services">Services</Nav.Link>
                             {/* <Nav.Link href="/projects">Projects</Nav.Link> */}
-                            {/* <Nav.Link href="/Contacts">Contact Us</Nav.Link> */}
+                            <Nav.Link href="/Contacts">Contact Us</Nav.Link>
                             <Nav.Link href="/">Home</Nav.Link>
                         </Nav>
                     </Container>
