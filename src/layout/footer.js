@@ -62,6 +62,12 @@ export default class Footer extends React.Component {
                         <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                             © 2024 Copyright:
                             <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+                                style={{
+                                    fontFamily: 'Arial, sans-serif',
+                                    fontSize: '24px',
+                                    fontWeight: 'bold',
+                                    color: '#7AA300'  // The green color similar to the image
+                                }}
                                 Green Sapper
                             </a>
                         </div>
