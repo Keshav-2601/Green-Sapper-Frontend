@@ -68,7 +68,7 @@ export default class Footer extends React.Component {
                                     fontWeight: 'bold',
                                     color: '#7AA300'  // The green color similar to the image
                                 }}
-                                Green Sapper
+                                GreenSapper
                             </a>
                         </div>
                     </MDBFooter>
