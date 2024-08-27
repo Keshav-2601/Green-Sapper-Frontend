@@ -1,0 +1,48 @@
+@media only screen and (max-width:590px) {
+    .Greensappermail-d-flex-align-items-center {
+        position: relative;
+        left: 300px;
+    }
+
+    .SoftwareUsedImages {
+        display: none !important;
+    }
+
+    .what-we-do-section {
+        display: none;
+    }
+    form{
+        position: relative;
+        left:-100px;
+    }
+}
+
+@media only screen and (min-width:591px)and (max-width:800px) {
+    .SoftwareUsedImages {
+        display: none !important;
+    }
+
+    .what-we-do-section {
+        display: none;
+    }
+    form{
+        position: relative;
+        left:-100px;
+    }
+}
+@media only screen and (min-width:801px) and (max-width:1400px){
+    .SoftwareUsedImages {
+        display: none !important;
+    }
+    form{
+        position: relative;
+        left:-100px;
+    }
+    #greensappermail{
+       position: absolute;
+       top:125px;
+    }
+}
+@media only screen and (min-width:1500px){
+
+}

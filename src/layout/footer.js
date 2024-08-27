@@ -40,9 +40,9 @@ export default class Footer extends React.Component {
                                     <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                                         <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                                         <p>
-                                            <div className="d-flex align-items-center">
+                                            <div  className="Greensappermail-d-flex align-items-center">
                                                 <MDBIcon icon="envelope" className="me-3" />
-                                                <span>greensappers@gmail.com</span>
+                                                <span id="greensappermail">greensappers@gmail.com</span>
                                             </div>
                                         </p>
                                         <p>
@@ -68,7 +68,7 @@ export default class Footer extends React.Component {
                                     fontWeight: 'bold',
                                     color: '#7AA300'  
                                 }}
-                                GreenSapper
+                                Green Sapper
                             />
                         </div>
                     </MDBFooter>

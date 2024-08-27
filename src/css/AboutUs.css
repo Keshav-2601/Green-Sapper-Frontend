@@ -37,6 +37,7 @@
     align-content: space-between;
     align-items: stretch;
     transition: transform 0.3s ease;
+   
 }
 .mt-6{
     display: flex;

@@ -13,6 +13,7 @@ import './css/AboutUs.css';
 import './css/Service.css';
 import './css/contact.css';
 import HomeBackground from './pages/Homebackground';
+import  './responsive.css';
 function App() {
   return (
     <Router>
