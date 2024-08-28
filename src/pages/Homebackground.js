@@ -12,33 +12,33 @@ export default class HomeBackground extends React.Component{
         <div className="BodyImage">
                     <MDBCarousel showIndicators showControls fade>
                         <MDBCarouselItem itemId={1}>
-                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/3434349.jpg"  alt='...' />
+                            <img id="image1" className="Homeimages" src="https://wallpaperaccess.com/full/3434349.jpg"  alt='...' />
                             <MDBCarouselCaption>   
                                 
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
 
                         <MDBCarouselItem itemId={2}>
-                            <img  className="Homeimages" src="https://images7.alphacoders.com/550/550378.jpg"  alt='...' />
+                            <img id="image2" className="Homeimages" src="https://images7.alphacoders.com/550/550378.jpg"  alt='...' />
                             <MDBCarouselCaption>
                                 
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
 
                         <MDBCarouselItem itemId={3}>
-                            <img  className="Homeimages" src={home3} alt='...' />
+                            <img  id="image3" className="Homeimages" src={home3} alt='...' />
                             <MDBCarouselCaption>
 
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
                         <MDBCarouselItem itemId={4}>
-                            <img  className="Homeimages" src="https://wallpapers.com/images/hd/black-and-white-solar-panels-jxkip6hmb8k7l2wx.jpg" alt='...' />
+                            <img id="image4" className="Homeimages" src="https://wallpapers.com/images/hd/black-and-white-solar-panels-jxkip6hmb8k7l2wx.jpg" alt='...' />
                             <MDBCarouselCaption>
 
                             </MDBCarouselCaption>
                         </MDBCarouselItem>
                         <MDBCarouselItem itemId={5}>
-                            <img  className="Homeimages" src="https://wallpaperaccess.com/full/2362761.jpg" alt='...' />
+                            <img id="image5" className="Homeimages" src="https://wallpaperaccess.com/full/2362761.jpg" alt='...' />
                             <MDBCarouselCaption>
 
                             </MDBCarouselCaption>
