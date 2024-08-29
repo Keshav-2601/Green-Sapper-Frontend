@@ -32,7 +32,24 @@
     #image5{
         content: url('https://th.bing.com/th/id/R.47c8acc163f70ac2da9dabff4e9bfee6?rik=pRv9Yfj0UuZPlw&riu=http%3a%2f%2fwww.tonyfretton.com%2fsolid11%2fassets%2fimages%2ftfa-cha-19-2000x2686.jpg&ehk=%2bzEK3g1wpgB4enf2Tk6k7kpLM8p0jD79d%2fb8i3W1KMw%3d&risl=&pid=ImgRaw&r=0');
     }
-    
+    .accordion-button::after{
+        left:10px;
+        top:-4px;
+    }
+    #serviceimg3,#serviceimg2,#dayimages2,#dayimages3{
+        display:none;
+    }
+    .service-images{
+        display: flex;
+        flex-direction: column;
+    }
+    #ThermalImg1{
+         height: 200px;
+         width: 300px;
+         position: relative;
+         left:10px;
+    }
+
 }
 
 @media only screen and (min-width:591px)and (max-width:800px) {
@@ -62,6 +79,18 @@
     #image5{
         content: url('https://th.bing.com/th/id/R.47c8acc163f70ac2da9dabff4e9bfee6?rik=pRv9Yfj0UuZPlw&riu=http%3a%2f%2fwww.tonyfretton.com%2fsolid11%2fassets%2fimages%2ftfa-cha-19-2000x2686.jpg&ehk=%2bzEK3g1wpgB4enf2Tk6k7kpLM8p0jD79d%2fb8i3W1KMw%3d&risl=&pid=ImgRaw&r=0');
     }
+    .accordion-button::after{
+        left:10px;
+        top:-4px;
+    }
+    #dayimages2,#dayimages1,#serviceimg3,#serviceimg2{
+        display: none;
+    }
+    #ThermalImg1{
+        position: relative;
+        left:10px;
+    }
+    
 }
 @media only screen and (min-width:801px) and (max-width:1400px){
     .SoftwareUsedImages {
@@ -89,6 +118,13 @@
     }
     #image5{
         content: url('https://th.bing.com/th/id/R.47c8acc163f70ac2da9dabff4e9bfee6?rik=pRv9Yfj0UuZPlw&riu=http%3a%2f%2fwww.tonyfretton.com%2fsolid11%2fassets%2fimages%2ftfa-cha-19-2000x2686.jpg&ehk=%2bzEK3g1wpgB4enf2Tk6k7kpLM8p0jD79d%2fb8i3W1KMw%3d&risl=&pid=ImgRaw&r=0');
+    }
+    #dayimages3,#serviceimg3{
+        display: none;
+    }
+    #ThermalImg1{
+        position: relative;
+        left:10px;
     }
 }
 @media only screen and (min-width:1500px){
