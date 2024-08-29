@@ -12,9 +12,9 @@ export default class Footer extends React.Component {
                             <MDBContainer className='text-center text-md-start mt-5'>
                                 <MDBRow className='mt-3'>
                                     <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-                                        <h6 className='text-uppercase fw-bold mb-4'>
-                                            <MDBIcon icon="gem" className="me-3" />
-                                            Green Sapper
+                                        <h6 id="greensapperslogo" className='text-uppercase fw-bold mb-4' >
+                                            <MDBIcon  className="me-3" />
+                                            GreenSappers
                                         </h6>
                                     </MDBCol>
 
@@ -40,7 +40,7 @@ export default class Footer extends React.Component {
                                     <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
                                         <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                                         <p>
-                                            <div  className="Greensappermail-d-flex align-items-center">
+                                            <div className="Greensappermail-d-flex align-items-center">
                                                 <MDBIcon icon="envelope" className="me-3" />
                                                 <span id="greensappermail">greensappers@gmail.com</span>
                                             </div>
@@ -59,18 +59,19 @@ export default class Footer extends React.Component {
                             </MDBContainer>
                         </section>
 
-                        <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+                        {/* <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                             © 2024 Copyright:
                             <a className='text-reset fw-bold' href='https://mdbootstrap.com/'
                                 style={{
                                     fontFamily: 'Arial, sans-serif',
                                     fontSize: '24px',
                                     fontWeight: 'bold',
-                                    color: '#7AA300'  
+                                    color: '#7AA300'
                                 }}
                                 Green Sapper
                             />
-                        </div>
+
+                        </div> */}
                     </MDBFooter>
                 </div>
             </>

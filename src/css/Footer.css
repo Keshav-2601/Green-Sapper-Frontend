@@ -37,3 +37,10 @@
     line-height: 1.6; /* Improve readability */
     margin-bottom: 15px; /* Space out paragraphs */
 }
+
+#greensapperslogo{
+    font-family: Arial;
+    font-size: 24;
+    font-weight: bold;
+    color: rgb(107, 247, 107);
+}
